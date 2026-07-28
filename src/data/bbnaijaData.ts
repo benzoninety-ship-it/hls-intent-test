@@ -1,12 +1,27 @@
 import { Housemate, ScheduleEvent, FAQItem, StreamConfig } from '../types';
 
+// ============================================================================
+// 🔴 EDIT YOUR LIVE STREAM URL HERE ANYTIME 🔴
+// Simply paste your new M3U8 or video stream link into STREAM_URL below.
+// All intent deep-links, copy buttons, and QR codes will automatically update!
+// ============================================================================
+const STREAM_URL = 'https://live-global-cdn-v02.sooplive.com/live-stmc-35/auth_playlist.m3u8?aid=.A32.pxqRXFPZNcY9Qg1.519oYht4McD6_YLts7A7Sky7DS2zcJbdjkpyIzEjv2G94F9kYrs4SQGDW43LPtpwbroKhz32XWBwGAMC34-bScNzSIxKCSAWCBzJ6ywPO5RR30eZtS8o3fBuwFyFNQtOv_dA7Z3LN1qtfuursje_JVg3V8HP-9Zs7iIdqZ4Wg7pbF8btug4x8GAYLF75AwgM';
+
+const PACKAGE_NAME = 'com.aistudio.videoplayer.vpxm';
+
+// Helper to construct clean Android Intent URI without PlayStore fallback
+const buildIntentUri = (url: string) => {
+  const rawPath = url.replace(/^https?:\/\//, '');
+  return `intent://${rawPath}#Intent;scheme=https;type=video/*;action=android.intent.action.VIEW;package=${PACKAGE_NAME};end;`;
+};
+
 export const BBN_STREAM_CONFIG: StreamConfig = {
   appName: 'StreamPulse',
-  packageName: 'com.streampulse.androidcom.aistudio.videoplayer.vpxm',
-  streamUrl: 'https://live-global-cdn-v02.sooplive.com/live-stmc-35/auth_playlist.m3u8?aid=.A32.pxqRXFPZNcY9Qg1.519oYht4McD6_YLts7A7Sky7DS2zcJbdjkpyIzEjv2G94F9kYrs4SQGDW43LPtpwbroKhz32XWBwGAMC34-bScNzSIxKCSAWCBzJ6ywPO5RR30eZtS8o3fBuwFyFNQtOv_dA7Z3LN1qtfuursje_JVg3V8HP-9Zs7iIdqZ4Wg7pbF8btug4x8GAYLF75AwgM',
+  packageName: PACKAGE_NAME,
+  streamUrl: STREAM_URL,
   playStoreUrl: '#',
-  intentUri: 'intent://live-global-cdn-v02.sooplive.com/live-stmc-35/auth_playlist.m3u8?aid=.A32.pxqRXFPZNcY9Qg1.519oYht4McD6_YLts7A7Sky7DS2zcJbdjkpyIzEjv2G94F9kYrs4SQGDW43LPtpwbroKhz32XWBwGAMC34-bScNzSIxKCSAWCBzJ6ywPO5RR30eZtS8o3fBuwFyFNQtOv_dA7Z3LN1qtfuursje_JVg3V8HP-9Zs7iIdqZ4Wg7pbF8btug4x8GAYLF75AwgM#Intent;scheme=https;type=video/*;action=android.intent.action.VIEW;package=com.streampulse.androidcom.aistudio.videoplayer.vpxm;end;',
-  customSchemeUri: 'streampulse://play?url=' + encodeURIComponent('https://live-global-cdn-v02.sooplive.com/live-stmc-35/auth_playlist.m3u8?aid=.A32.pxqRXFPZNcY9Qg1.519oYht4McD6_YLts7A7Sky7DS2zcJbdjkpyIzEjv2G94F9kYrs4SQGDW43LPtpwbroKhz32XWBwGAMC34-bScNzSIxKCSAWCBzJ6ywPO5RR30eZtS8o3fBuwFyFNQtOv_dA7Z3LN1qtfuursje_JVg3V8HP-9Zs7iIdqZ4Wg7pbF8btug4x8GAYLF75AwgM')
+  intentUri: buildIntentUri(STREAM_URL),
+  customSchemeUri: `streampulse://play?url=${encodeURIComponent(STREAM_URL)}`
 };
 
 export const SAMPLE_HOUSEMATES: Housemate[] = [
@@ -152,7 +167,7 @@ export const FAQS: FAQItem[] = [
   {
     id: 'faq-2',
     question: 'What is the package name for StreamPulse on Android?',
-    answer: 'The official Android package name is com.streampulse.androidcom.aistudio.videoplayer.vpxm. You can verify this in your Android device app settings or launcher.',
+    answer: 'The official Android package name is com.aistudio.videoplayer.vpxm. You can verify this in your Android device app settings or launcher.',
     category: 'android'
   },
   {
@@ -179,7 +194,7 @@ export const INSTALL_STEPS = [
   {
     step: 1,
     title: 'Launch StreamPulse App',
-    description: 'Ensure StreamPulse (package com.streampulse.androidcom.aistudio.videoplayer.vpxm) is installed on your Android device.',
+    description: 'Ensure StreamPulse (package com.aistudio.videoplayer.vpxm) is installed on your Android device.',
     iconName: 'Smartphone'
   },
   {
