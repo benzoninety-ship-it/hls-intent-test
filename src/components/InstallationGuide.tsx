@@ -123,16 +123,23 @@ export const InstallationGuide: React.FC<InstallationGuideProps> = ({ onOpenStre
                   <span>Test Launch Intent Now</span>
                 </button>
 
-                <a
-                  href={BBN_STREAM_CONFIG.playStoreUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <button
+                  id="guide-copy-stream-btn"
+                  onClick={handleCopyLink}
                   className="px-6 py-3 rounded-full font-bold text-xs uppercase tracking-wider bg-white/10 hover:bg-white/20 text-white border border-white/10 flex items-center gap-2 transition-colors"
                 >
-                  <Download className="w-4 h-4 text-[#D4AF37]" />
-                  <span>Google Play Store</span>
-                  <ExternalLink className="w-3.5 h-3.5 text-white/50" />
-                </a>
+                  {copied ? (
+                    <>
+                      <Check className="w-4 h-4 text-emerald-400" />
+                      <span>Stream URL Copied</span>
+                    </>
+                  ) : (
+                    <>
+                      <Copy className="w-4 h-4 text-[#D4AF37]" />
+                      <span>Copy M3U8 Stream URL</span>
+                    </>
+                  )}
+                </button>
               </div>
             </div>
 

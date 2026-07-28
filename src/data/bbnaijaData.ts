@@ -4,8 +4,8 @@ export const BBN_STREAM_CONFIG: StreamConfig = {
   appName: 'StreamPulse',
   packageName: 'com.streampulse.androidcom.aistudio.videoplayer.vpxm',
   streamUrl: 'https://live-global-cdn-v02.sooplive.com/live-stmc-33/auth_playlist.m3u8?aid=.A32.pxqRXFPZNcY9Qg1.Y3YtrwOcVlx9QAytuA2LKQsY3OIuLjceibED5uOR0zUEYG_kzPy2aM1iZjBj-UkcKiEjB9pHPKv5C8BUtfTJhgQevaTsqo8SiF2Vr_VPqT9UtQ87SpARlT7xAJiSxcvKEM9kyyK9j66O4r4mMuaxKWpPON4kQpZZUnOYzUAjhaqXU5v_-XRG07w90Fe-QPHo',
-  playStoreUrl: 'https://play.google.com/store/apps/details?id=com.streampulse.androidcom.aistudio.videoplayer.vpxm',
-  intentUri: 'intent://live-global-cdn-v02.sooplive.com/live-stmc-33/auth_playlist.m3u8?aid=.A32.pxqRXFPZNcY9Qg1.Y3YtrwOcVlx9QAytuA2LKQsY3OIuLjceibED5uOR0zUEYG_kzPy2aM1iZjBj-UkcKiEjB9pHPKv5C8BUtfTJhgQevaTsqo8SiF2Vr_VPqT9UtQ87SpARlT7xAJiSxcvKEM9kyyK9j66O4r4mMuaxKWpPON4kQpZZUnOYzUAjhaqXU5v_-XRG07w90Fe-QPHo#Intent;scheme=https;type=video/*;package=com.streampulse.androidcom.aistudio.videoplayer.vpxm;S.browser_fallback_url=https%3A%2F%2Fplay.google.com%2Fstore%2Fapps%2Fdetails%3Fid%3Dcom.streampulse.androidcom.aistudio.videoplayer.vpxm;end;',
+  playStoreUrl: '#',
+  intentUri: 'intent://live-global-cdn-v02.sooplive.com/live-stmc-33/auth_playlist.m3u8?aid=.A32.pxqRXFPZNcY9Qg1.Y3YtrwOcVlx9QAytuA2LKQsY3OIuLjceibED5uOR0zUEYG_kzPy2aM1iZjBj-UkcKiEjB9pHPKv5C8BUtfTJhgQevaTsqo8SiF2Vr_VPqT9UtQ87SpARlT7xAJiSxcvKEM9kyyK9j66O4r4mMuaxKWpPON4kQpZZUnOYzUAjhaqXU5v_-XRG07w90Fe-QPHo#Intent;scheme=https;type=video/*;action=android.intent.action.VIEW;package=com.streampulse.androidcom.aistudio.videoplayer.vpxm;end;',
   customSchemeUri: 'streampulse://play?url=' + encodeURIComponent('https://live-global-cdn-v02.sooplive.com/live-stmc-33/auth_playlist.m3u8?aid=.A32.pxqRXFPZNcY9Qg1.Y3YtrwOcVlx9QAytuA2LKQsY3OIuLjceibED5uOR0zUEYG_kzPy2aM1iZjBj-UkcKiEjB9pHPKv5C8BUtfTJhgQevaTsqo8SiF2Vr_VPqT9UtQ87SpARlT7xAJiSxcvKEM9kyyK9j66O4r4mMuaxKWpPON4kQpZZUnOYzUAjhaqXU5v_-XRG07w90Fe-QPHo')
 };
 
@@ -152,13 +152,13 @@ export const FAQS: FAQItem[] = [
   {
     id: 'faq-2',
     question: 'What is the package name for StreamPulse on Android?',
-    answer: 'The official Android package name is com.streampulse.androidcom.aistudio.videoplayer.vpxm. You can verify this in the Google Play Store or APK launcher.',
+    answer: 'The official Android package name is com.streampulse.androidcom.aistudio.videoplayer.vpxm. You can verify this in your Android device app settings or launcher.',
     category: 'android'
   },
   {
     id: 'faq-3',
     question: 'What happens when I click "Watch Now on StreamPulse"?',
-    answer: 'On Android devices, clicking "Watch Now" sends a direct system Intent (intent://...) to launch the StreamPulse app with the BBNaija HLS stream pre-loaded. If StreamPulse is not installed yet, Android will automatically open the Google Play Store page so you can download it.',
+    answer: 'On Android devices with StreamPulse installed, clicking "Watch Now" sends a direct system Intent (intent://...) to open StreamPulse immediately with the BBNaija live stream loaded. No Play Store redirection will occur.',
     category: 'android'
   },
   {
@@ -178,20 +178,20 @@ export const FAQS: FAQItem[] = [
 export const INSTALL_STEPS = [
   {
     step: 1,
-    title: 'Install StreamPulse App',
-    description: 'Click "Download StreamPulse" or search Google Play Store for com.streampulse.androidcom.aistudio.videoplayer.vpxm to install the player on your Android phone.',
-    iconName: 'Download'
+    title: 'Launch StreamPulse App',
+    description: 'Ensure StreamPulse (package com.streampulse.androidcom.aistudio.videoplayer.vpxm) is installed on your Android device.',
+    iconName: 'Smartphone'
   },
   {
     step: 2,
     title: 'Tap "Watch Live in StreamPulse"',
-    description: 'Click the primary stream button on this website to trigger the intent and automatically launch StreamPulse with the preconfigured BBNaija stream.',
+    description: 'Click the primary stream button on this website to trigger the system intent and open StreamPulse directly with the live stream.',
     iconName: 'PlayCircle'
   },
   {
     step: 3,
     title: 'Fallback via URL Copy / Scan',
-    description: 'If you prefer manual entry or are on a PC, scan the QR code with your Android phone camera or copy the HLS link into StreamPulse\'s "Network Stream" feature.',
+    description: 'If you prefer manual entry, copy the HLS link or scan the QR code to paste into StreamPulse\'s "Network Stream" feature.',
     iconName: 'Copy'
   },
   {

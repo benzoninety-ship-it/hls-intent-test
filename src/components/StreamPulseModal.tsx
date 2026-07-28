@@ -24,17 +24,8 @@ export const StreamPulseModal: React.FC<StreamPulseModalProps> = ({ isOpen, onCl
   };
 
   const handleLaunchApp = () => {
-    // Attempt Intent URI trigger for Android
+    // Attempt Intent URI trigger for Android without PlayStore fallback
     window.location.href = BBN_STREAM_CONFIG.intentUri;
-
-    // Set a fallback timer in case Intent does not redirect (e.g. non-android or uninstalled)
-    setTimeout(() => {
-      // Check if user is still on page after 2.5 seconds, offer Play Store link
-    }, 2500);
-  };
-
-  const handleOpenPlayStore = () => {
-    window.open(BBN_STREAM_CONFIG.playStoreUrl, '_blank', 'noopener,noreferrer');
   };
 
   return (
@@ -129,7 +120,7 @@ export const StreamPulseModal: React.FC<StreamPulseModalProps> = ({ isOpen, onCl
                 <div>
                   <h4 className="text-xs font-bold text-white uppercase tracking-wider">Android Intent Integration</h4>
                   <p className="text-xs text-white/60 mt-1 leading-relaxed">
-                    Clicking <strong className="text-white">Watch Now in StreamPulse</strong> triggers an Android system intent to launch the video player app. If missing, it automatically redirects to Google Play.
+                    Clicking <strong className="text-white">Watch in StreamPulse</strong> triggers a clean Android system intent to open the installed app (<code className="text-[#D4AF37] font-mono text-[11px]">com.streampulse...vpxm</code>) directly.
                   </p>
                 </div>
               </div>
@@ -150,17 +141,29 @@ export const StreamPulseModal: React.FC<StreamPulseModalProps> = ({ isOpen, onCl
                   </div>
                 </button>
 
-                {/* Play Store Fallback Button */}
+                {/* Copy Stream URL Button */}
                 <button
-                  id="modal-play-store-btn"
-                  onClick={handleOpenPlayStore}
+                  id="modal-copy-stream-btn"
+                  onClick={handleCopyLink}
                   className="w-full py-4 px-6 rounded-full font-bold text-sm bg-white/10 hover:bg-white/20 text-white border border-white/10 flex items-center justify-center gap-3 transition-colors active:scale-95 uppercase tracking-wider"
                 >
-                  <Download className="w-5 h-5 text-[#D4AF37]" />
-                  <div className="text-left">
-                    <div className="font-extrabold leading-tight">Google Play Store</div>
-                    <div className="text-[10px] text-white/50 font-medium">Download StreamPulse APK</div>
-                  </div>
+                  {copied ? (
+                    <>
+                      <Check className="w-5 h-5 text-emerald-400" />
+                      <div className="text-left">
+                        <div className="font-extrabold leading-tight text-emerald-400">Stream URL Copied!</div>
+                        <div className="text-[10px] text-white/50 font-medium">Paste in StreamPulse Network Stream</div>
+                      </div>
+                    </>
+                  ) : (
+                    <>
+                      <Copy className="w-5 h-5 text-[#D4AF37]" />
+                      <div className="text-left">
+                        <div className="font-extrabold leading-tight">Copy Stream URL</div>
+                        <div className="text-[10px] text-white/50 font-medium">For manual entry</div>
+                      </div>
+                    </>
+                  )}
                 </button>
               </div>
 
