@@ -1,0 +1,6 @@
+{
+  "name": "Big Brother Naija StreamPulse Live",
+  "description": "Official 24/7 Big Brother Naija live stream portal and launch guide for StreamPulse Android App.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
