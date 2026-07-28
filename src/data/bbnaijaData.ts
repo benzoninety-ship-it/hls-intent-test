@@ -3,10 +3,10 @@ import { Housemate, ScheduleEvent, FAQItem, StreamConfig } from '../types';
 export const BBN_STREAM_CONFIG: StreamConfig = {
   appName: 'StreamPulse',
   packageName: 'com.streampulse.androidcom.aistudio.videoplayer.vpxm',
-  streamUrl: 'https://live-global-cdn-v02.sooplive.com/live-stmc-33/auth_playlist.m3u8?aid=.A32.pxqRXFPZNcY9Qg1.Y3YtrwOcVlx9QAytuA2LKQsY3OIuLjceibED5uOR0zUEYG_kzPy2aM1iZjBj-UkcKiEjB9pHPKv5C8BUtfTJhgQevaTsqo8SiF2Vr_VPqT9UtQ87SpARlT7xAJiSxcvKEM9kyyK9j66O4r4mMuaxKWpPON4kQpZZUnOYzUAjhaqXU5v_-XRG07w90Fe-QPHo',
+  streamUrl: 'https://live-global-cdn-v02.sooplive.com/live-stmc-35/auth_playlist.m3u8?aid=.A32.pxqRXFPZNcY9Qg1.519oYht4McD6_YLts7A7Sky7DS2zcJbdjkpyIzEjv2G94F9kYrs4SQGDW43LPtpwbroKhz32XWBwGAMC34-bScNzSIxKCSAWCBzJ6ywPO5RR30eZtS8o3fBuwFyFNQtOv_dA7Z3LN1qtfuursje_JVg3V8HP-9Zs7iIdqZ4Wg7pbF8btug4x8GAYLF75AwgM',
   playStoreUrl: '#',
-  intentUri: 'intent://live-global-cdn-v02.sooplive.com/live-stmc-33/auth_playlist.m3u8?aid=.A32.pxqRXFPZNcY9Qg1.Y3YtrwOcVlx9QAytuA2LKQsY3OIuLjceibED5uOR0zUEYG_kzPy2aM1iZjBj-UkcKiEjB9pHPKv5C8BUtfTJhgQevaTsqo8SiF2Vr_VPqT9UtQ87SpARlT7xAJiSxcvKEM9kyyK9j66O4r4mMuaxKWpPON4kQpZZUnOYzUAjhaqXU5v_-XRG07w90Fe-QPHo#Intent;scheme=https;type=video/*;action=android.intent.action.VIEW;package=com.streampulse.androidcom.aistudio.videoplayer.vpxm;end;',
-  customSchemeUri: 'streampulse://play?url=' + encodeURIComponent('https://live-global-cdn-v02.sooplive.com/live-stmc-33/auth_playlist.m3u8?aid=.A32.pxqRXFPZNcY9Qg1.Y3YtrwOcVlx9QAytuA2LKQsY3OIuLjceibED5uOR0zUEYG_kzPy2aM1iZjBj-UkcKiEjB9pHPKv5C8BUtfTJhgQevaTsqo8SiF2Vr_VPqT9UtQ87SpARlT7xAJiSxcvKEM9kyyK9j66O4r4mMuaxKWpPON4kQpZZUnOYzUAjhaqXU5v_-XRG07w90Fe-QPHo')
+  intentUri: 'intent://live-global-cdn-v02.sooplive.com/live-stmc-35/auth_playlist.m3u8?aid=.A32.pxqRXFPZNcY9Qg1.519oYht4McD6_YLts7A7Sky7DS2zcJbdjkpyIzEjv2G94F9kYrs4SQGDW43LPtpwbroKhz32XWBwGAMC34-bScNzSIxKCSAWCBzJ6ywPO5RR30eZtS8o3fBuwFyFNQtOv_dA7Z3LN1qtfuursje_JVg3V8HP-9Zs7iIdqZ4Wg7pbF8btug4x8GAYLF75AwgM#Intent;scheme=https;type=video/*;action=android.intent.action.VIEW;package=com.streampulse.androidcom.aistudio.videoplayer.vpxm;end;',
+  customSchemeUri: 'streampulse://play?url=' + encodeURIComponent('https://live-global-cdn-v02.sooplive.com/live-stmc-35/auth_playlist.m3u8?aid=.A32.pxqRXFPZNcY9Qg1.519oYht4McD6_YLts7A7Sky7DS2zcJbdjkpyIzEjv2G94F9kYrs4SQGDW43LPtpwbroKhz32XWBwGAMC34-bScNzSIxKCSAWCBzJ6ywPO5RR30eZtS8o3fBuwFyFNQtOv_dA7Z3LN1qtfuursje_JVg3V8HP-9Zs7iIdqZ4Wg7pbF8btug4x8GAYLF75AwgM')
 };
 
 export const SAMPLE_HOUSEMATES: Housemate[] = [
