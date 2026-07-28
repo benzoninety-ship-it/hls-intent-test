@@ -5,7 +5,7 @@ import { Housemate, ScheduleEvent, FAQItem, StreamConfig } from '../types';
 // Simply paste your new M3U8 or video stream link into STREAM_URL below.
 // All intent deep-links, copy buttons, and QR codes will automatically update!
 // ============================================================================
-const STREAM_URL = 'https://live-global-cdn-v02.sooplive.com/live-stmc-35/auth_playlist.m3u8?aid=.A32.pxqRXFPZNcY9Qg1.519oYht4McD6_YLts7A7Sky7DS2zcJbdjkpyIzEjv2G94F9kYrs4SQGDW43LPtpwbroKhz32XWBwGAMC34-bScNzSIxKCSAWCBzJ6ywPO5RR30eZtS8o3fBuwFyFNQtOv_dA7Z3LN1qtfuursje_JVg3V8HP-9Zs7iIdqZ4Wg7pbF8btug4x8GAYLF75AwgM';
+const STREAM_URL = 'https://live-global-cdn-v02.sooplive.com/live-stm-07/auth_playlist.m3u8?aid=.A32.pxqRXFPZNcY9Qg1.rsqquCnrvNO8XaqvhraqpDtzEWz098qE6XicM8OIuL_jPCoQsbx0E4PipiBvhproiuDtHiUuLJVs1pYIW4Gtl4ZLEaJduql00sTZ2WxnxjD62bG6cNyXpK7JOrFugTpDp2u6j6Ko5WXsYXKE7ryoBXIpz7MJL9c9YAKfCodZjoJ2EGSQjwObOzhNIgvrphi_';
 
 const PACKAGE_NAME = 'com.aistudio.videoplayer.vpxm';
 
